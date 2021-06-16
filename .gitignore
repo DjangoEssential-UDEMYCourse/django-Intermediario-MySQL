@@ -5,3 +5,5 @@ __PyCache__
 *.pyc
 
 .idea
+
+produtos/

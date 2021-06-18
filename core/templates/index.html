@@ -1,3 +1,4 @@
+{% load static %}
 {% load bootstrap4 %}
 
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
     <title>Index</title>
 
     {% bootstrap_css %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <div class="container">
@@ -35,7 +37,14 @@
                     <div class="modal fade bd-example-modal-lg" id="modal{{produto.id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                          ...
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                              <div class="modal-body" id="dynamic-content">
+                                <img src="{{ produto.imagem.url }}" class="img-fluid" alt="{{ produto.nome }}"/>
+                              </div>
+                          </div>
                         </div>
                       </div>
                     </div>

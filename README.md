@@ -4,7 +4,8 @@
  django-admin startapp core
  pip3 install  whitenoise gunicorn django-bootstrap4 PyMySQL django-stdimage
  pip3 install dj_database_url psycopg2-binary
- 
+ pip3 install dj-static 
+ pip uninstall whitenoise
  pip3 freeze > requirements.txt
  
  
